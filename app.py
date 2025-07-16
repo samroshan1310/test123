@@ -5,10 +5,10 @@ import os
 
 app = Flask(__name__)
 
-KEY_VAULT_NAME = os.environ.get("KEY_VAULT_NAME")
+KEY_VAULT_NAME = os.environ.get("keyvault51e")
 SECRET_NAME = "MyApiKey"
 
-KVUri = f"https://{KEY_VAULT_NAME}.vault.azure.net"
+KVUri = f"https://keyvault51e.vault.azure.net/"
 
 credential = DefaultAzureCredential()
 client = SecretClient(vault_url=KVUri, credential=credential)
